@@ -23,9 +23,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Download Important Files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/anbeong/Windows2019RDP-Github/main/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/anbeong/Windows2019RDP-Github/main/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/anbeong/Windows2019RDP-Github/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/whoops01/SVR2019-RDP/blob/main/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/whoops01/SVR2019-RDP/blob/main/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/whoops01/SVR2019-RDP/blob/main/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-US.bat
     - name: Enable RDP Access.
